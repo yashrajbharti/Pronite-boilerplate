@@ -1,0 +1,204 @@
+.swiper-container {
+  width: 100%;
+
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: 50%;
+  height: 60vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 2px solid #fff;
+  transform: translateY(-5vh);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.swiper-button-container {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.swiper-button-prev {
+  transform: translateY(-5vh);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-next {
+  transform: translateY(-5vh);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "San Francisco Display Semibold";
+} */
+
+.swiper-slide:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .4;
+}
+.swiper-slide h2 {
+  pointer-events: none;
+  opacity: 0;
+  color: #ffffff;
+  font-size: calc(5vw);
+  letter-spacing: -1px;
+  -webkit-transform: translateY(-5%) scale(0.8);
+          transform: translateY(-5%) scale(0.8);
+  transition: 1s ease;
+  text-transform: uppercase;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.01);
+}
+.swiper-slide-active h2 {
+  opacity: 1;
+  -webkit-transform: translateY(0%) scale(1);
+          transform: translateY(0%) scale(1);
+  transition: 1s ease;
+}
+
+@font-face {
+  font-family: "San Francisco Display Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg");
+}
+body {
+  font: 13px/1.231 "Lucida Grande", Verdana, sans-serif;
+
+  color: #111;
+  margin: 0 auto;
+
+justify-content: center;
+
+}
+.site {
+  width: 100%;
+  height:100%;
+  margin: 1.25em auto;
+justify-content: center;
+  overflow: auto;
+
+}
+.wide {
+  width: 100%;
+}
+/* Portfolio gallery */
+.gallery-portfolio img {
+  max-width: 100% !important;
+  display: block;
+  border: none;
+  padding: 0;
+}
+ .gallery-portfolio img:hover{
+ max-width: 105% !important;
+transform: translateZ(50px);
+transition: 0.3s ease-in-out;
+}
+.gallery {
+  overflow: auto;
+  list-style: none;
+}
+.gallery-portfolio {
+
+  margin: 2em 2em;
+  overflow: auto;
+  list-style: none;
+  padding: auto;
+}
+.gallery-portfolio li,
+.gallery-portfolio li a {
+  float: left;
+  box-sizing: border-box;
+}
+.gallery-portfolio li {
+  float: left;
+  width: 20%;
+  margin: 0 0.5% 0.5% 0;
+  padding: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+
+}
+.gallery-portfolio li:nth-child(4n+0) {
+  margin-right: 0;
+  margin-bottom: 50px;
+
+}
+.gallery-portfolio li a {
+  text-decoration: none;
+  width: 100%;
+  max-height: 156px;
+  transition: outline .4s;
+  outline: 5px solid transparent;
+}
+.gallery-portfolio img:hover {
+  outline: solid 6px rgba(0,1,1,0.6);
+
+}
+.gallery-portfolio li:nth-child(4n+1) {
+  clear: left;
+  /* outline: 3px solid green; */
+}
+/* images original size: width:400px, height: 225px
+images rendered size: width:224px, height: 126px
+ */
+
+p {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+/* ==========================================================
+Responsive-ness
+============================================================= */
+/* Mobile (landscape)
+Note: Design for a width of 480px
+------------------------------------------------------------- */
+@media only screen and ( min-width: 574px ) and ( max-width: 861px ) {
+  .wide {
+    /* width: auto; */
+  }
+}
+
+@media only screen and ( max-width: 574px ) {
+  .gallery-portfolio  {
+    overflow: hidden;
+  }
+  .gallery-portfolio li {
+    width: 100%;
+    max-width: 400px;
+  }
+  .gallery-portfolio li a {
+    height: auto;
+    max-height: inherit;
+  }
+}
+@media only screen and (orientation:portrait){
+  .gallery-portfolio  {
+    transform: translateX(-17px);
+  }
+}
+@media only screen and (orientation:landscape){
+  .gallery-portfolio  {
+    transform: translateX(57px);
+  }
+}
+@media only screen and ( min-width: 862px ) {   }
