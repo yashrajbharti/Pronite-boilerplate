@@ -1,5 +1,7 @@
 .swiper-container {
   width: 100%;
+  background-image: linear-gradient(to right top, #a61668, #ab237a, #ad2f8d, #ae3ca0, #ac49b4, #a74cbc, #a050c5, #9854cd, #8d50cc, #824ccc, #7648cb, #6845cb);
+
 
 }
 
@@ -13,6 +15,14 @@
   justify-content: center;
   flex-direction: column;
 }
+/* .swiper-container::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url(a.jpg);
+    filter: blur(10px);
+} */
 
 .swiper-pagination-bullet {
   background-color: transparent;
@@ -131,16 +141,16 @@ transition: 0.3s ease-in-out;
 }
 .gallery-portfolio li {
   float: left;
-  width: 20%;
+  width: 30%;
   margin: 0 0.5% 0.5% 0;
   padding: 5px;
   padding-bottom: 5px;
   background-color: #fff;
 
 }
-.gallery-portfolio li:nth-child(4n+0) {
+.gallery-portfolio li:nth-child(3n+0) {
   margin-right: 0;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 
 }
 .gallery-portfolio li a {
@@ -154,7 +164,7 @@ transition: 0.3s ease-in-out;
   outline: solid 6px rgba(0,1,1,0.6);
 
 }
-.gallery-portfolio li:nth-child(4n+1) {
+.gallery-portfolio li:nth-child(3n+1) {
   clear: left;
   /* outline: 3px solid green; */
 }
@@ -177,7 +187,17 @@ Note: Design for a width of 480px
     /* width: auto; */
   }
 }
+img{
+  object-fit: cover;
+}
+.styleit{
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  color: #555;
 
+
+}
 @media only screen and ( max-width: 574px ) {
   .gallery-portfolio  {
     overflow: hidden;
@@ -193,12 +213,24 @@ Note: Design for a width of 480px
 }
 @media only screen and (orientation:portrait){
   .gallery-portfolio  {
-    transform: translateX(-17px);
+    transform: translateX(-20px);
   }
+  .styleit{
+      transform: translateY(10px);
+  }
+
 }
 @media only screen and (orientation:landscape){
   .gallery-portfolio  {
-    transform: translateX(57px);
+    transform: translateX(47px);
+  }
+  .styleit{
+      transform: translateY(150px);
+  }
+  .gallery-portfolio li:nth-child(3n+0) {
+    margin-right: 0;
+    margin-bottom: 150px;
+
   }
 }
 @media only screen and ( min-width: 862px ) {   }
